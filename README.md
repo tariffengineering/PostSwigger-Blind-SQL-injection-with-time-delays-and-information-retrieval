@@ -35,8 +35,8 @@ The exploit script automates the process of extracting the administrator's passw
 
 3.  **Extract Password Characters**: Once the length is known, the script iterates through each character position of the password. For each position, it tests characters from a predefined charset (`abcdefghijklmnopqrstuvwxyz0123456789`) by injecting conditions like `(SELECT SUBSTRING(password, P, 1) FROM users WHERE username='administrator')='C'`, where `P` is the position and `C` is the character being tested. A time delay indicates the correct character for that position.
 
-![Image 1](./image/1.png)
-![Image 2](./image/2.png)
+![Determine Password Length](./image/1.png)
+![Extract Password Characters](./image/2.png)
 
 ## Python Script Overview 🐍
 
